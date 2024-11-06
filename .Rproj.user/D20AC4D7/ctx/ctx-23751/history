@@ -1,0 +1,228 @@
+install.packages("palmerpenguins")
+install.packages("here")
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+install.packages("janitor")
+library(janitor)
+library(here)
+here::here()
+# data was loaded in as part of the library
+head(penguins_raw
+# data was loaded in as part of the library
+head(penguins_raw)
+# data was loaded in as part of the library
+View(penguins_raw)
+str(penguins_raw)
+write.csv(here::here\data)
+write.csv(penguins_raw, here(data, penguins_raw.csv))
+write.csv(penguins_raw, here("data", "penguins_raw.csv"))
+library(dplyr)
+penguins_clean <- penguins_raw %>% select(-Comments) %>% select(-starts_with("Delta")) %>% clean_names()
+View(penguins_clean)
+cleaning_penguin_columns <- function(raw_data){
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments)
+}
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+# writing of function to clean data ----
+cleaning_penguin_columns <- function(raw_data){
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments) %>%
+print("Removed empty columns and rows, cleaned column names, removed comments and delta columns")
+}
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+# use of the made function to clean code
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+colnames(penguins_clean)
+cleaning_penguin_columns <- function(raw_data){
+print("Removed empty columns and rows, cleaned column names, removed comments and delta columns")
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments) %>%
+}
+cleaning_penguin_columns <- function(raw_data){
+print("Removed empty columns and rows, cleaned column names, removed comments and delta.")
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments) %>%
+}
+cleaning_penguin_columns <- function(raw_data){
+print("Removed empty columns and rows, cleaned column names, removed comments and delta.") %>%
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments) %>%
+}
+cleaning_penguin_columns <- function(raw_data){
+print("Removed empty columns and rows, cleaned column names, removed comments and delta.") %>%
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments) %>%
+}
+cleaning_penguin_columns <- function(raw_data){
+print("Removed empty columns and rows, cleaned column names, removed comments and delta.") %>%
+raw_data %>%
+clean_names() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-starts_with("delta")) %>%
+select(-comments)
+}
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+# writing the clean data to a csv
+write.csv(penguins_raw, here("data", "penguins_raw.csv"))
+file.create(here("function", cleaning.R))
+file.create(here("function", "cleaning.R"))
+file.create(here("functions", "cleaning.R"))
+# loading our function file
+source(here("functions", "cleaning.R"))
+# data was loaded in as part of the library
+View(penguins_raw)
+write.csv(penguins_raw, here("data", "penguins_raw.csv"))
+penguins_raw <- read.csv("~/Oxford/Year 3/Coursework/R work/Coding Tuition/PenguinProject/data/penguins_raw.csv")
+View(penguins_raw)
+penguins_clean <- cleaning_penguin_columns(penguins_raw, c("comments - pseudocode for the addition of new details"))
+# writing the clean data to a csv
+write.csv(penguins_clean, here("data", "penguins_clean.csv"))
+# use of the made function to clean code
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+cleaning_penguin_columns <- function(raw_data){
+print("Cleaned anmes, removed comments, removed empty rows and cols, removed delta")
+raw_data %>%
+clean_names() %>%
+shorten_species() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-comments) %>%
+select(-starts_with("delta"))
+}
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"))
+# using functions from the function script ----
+cleaning_penguin_columns <- function(raw_data){
+print("Cleaned anmes, removed comments, removed empty rows and cols, removed delta")
+raw_data %>%
+clean_names() %>%
+shorten_species() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-comments) %>%
+select(-starts_with("delta"))
+}
+# using function ----
+colnames(penguins_raw)
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+colnames(penguins_clean)
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"))
+# using functions from the function script ----
+cleaning_penguin_columns <- function(raw_data){
+print("Cleaned anmes, removed comments, removed empty rows and cols, removed delta")
+raw_data %>%
+clean_names() %>%
+shorten_species() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-comments) %>%
+select(-starts_with("delta"))
+}
+# using function ----
+colnames(penguins_raw)
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+colnames(penguins_clean)
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"), row.names = FALSE)
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"))
+# using functions from the function script ----
+cleaning_penguin_columns <- function(raw_data){
+print("Cleaned anmes, removed comments, removed empty rows and cols, removed delta")
+raw_data %>%
+clean_names() %>%
+shorten_species() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-comments) %>%
+select(-starts_with("delta"))
+}
+# using function ----
+colnames(penguins_raw)
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+colnames(penguins_clean)
+View(penguins_raw)
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"), check.names = FALSE)
+# using functions from the function script ----
+cleaning_penguin_columns <- function(raw_data){
+print("Cleaned anmes, removed comments, removed empty rows and cols, removed delta")
+raw_data %>%
+clean_names() %>%
+shorten_species() %>%
+remove_empty(c("rows", "cols")) %>%
+select(-comments) %>%
+select(-starts_with("delta"))
+}
+# using function ----
+colnames(penguins_raw)
+penguins_clean <- cleaning_penguin_columns(penguins_raw)
+colnames(penguins_clean)
+View(penguins_raw)
+library(tidyverse)
+library(palmerpenguins)
+library(janitor)
+library(here)
+library(dplyr)
+# loading of functions file ----
+source(here("functions", "cleaning.R"))
+# loading of raw data ----
+penguins_raw <- read.csv(here("data", "penguins_raw.csv"), row.names = FALSE)
+install.packages("renv")
+# looking at renv
+renv::init()
+renv::snapshot()
+git ::init
+install.packages("git")
